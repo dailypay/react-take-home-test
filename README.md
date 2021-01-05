@@ -8,34 +8,35 @@ The goal of this challenge is to build out a "Movie Awards 2021" interactive bal
 
 Here are the strict rules of this challenge.. you must:
 
-- 1) Build an application that displays a list of categories and nominees.
-- 2) Fetch the ballot data from the provided API. Run `yarn backend` to start the server and get access to API methods such as `getBallotData`
-- 4) When you click on a nominee, we should highlight the nominee and save the selection locally on the client.
-- 5) If I select my choices for different categories and refresh the page, I should still see my selections highlighted.
-- 6) Display a button, that when clicked, displays a sidebar with the latest users' selections
-- 7) Once the user is finished making their selection, they can click on a button and submit the form, displaying a results screen after submission.
+ 1) Build an application that displays a list of categories and nominees.
+ 2) Fetch the ballot data from the provided API. Run `yarn backend` to start the server and get access to API methods such as `getBallotData`
+ 3) When you click on a nominee, we should highlight the nominee and save the selection locally on the client.
+ 4) If I select my choices for different categories and refresh the page, I should still see my selections highlighted.
+ 5) Display a button, that when clicked, displays a sidebar with the latest users' selections
+ 6) Once the user is finished making their selection, they can click on a button and submit the form, displaying a results screen after submission.
 
 ## Requirements:
-- 1) All navigation should happen in the same page
-- 2) Demonstrate use of React hooks and functional components
-- 3) Utilize CSS/SASS to create the layout of the page
-- 4) Create components as you feel is best suited for your solution
-- 5) Demonstrate use of performance best practices when handling large assets / build size
+ 1) All navigation should happen in the same page
+ 2) Demonstrate use of React hooks and functional components
+ 3) Utilize CSS/SASS to create the layout of the page
+ 4) Create components as you feel is best suited for your solution
+ 5) Demonstrate use of performance best practices when handling large assets / build size
 
 ![Alt text](src/take-home-wire.jpg?raw=true "Optional Title")
 
 ## Bonuses
-- 1) Make the layout responsive with at least one breakpoint (your choice as to how it looks on a smaller screen width).
-- 2) Make it pretty
-- 3) Make it accessible
+1) Make the layout responsive with at least one breakpoint (your choice as to how it looks on a smaller screen width).
+2) Make it pretty
+3) Make it accessible
+4) Add unit tests
 
 ## Styling Guidelines
 
 - Use the "Roboto" Google font   
 - Use the following colors   
-	- Page background: #FFFFFF    
-	- Default/normal font color: #494949   
-	- Button / sidebar background: #83EDD9   
+	- Page background: - ![#0D2436](https://via.placeholder.com/15/0D2436/000000?text=+) `#0D2436`
+	- Default/normal font color: ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `#FFFFFF`
+	- Button / sidebar background: ![#009B86](https://via.placeholder.com/15/009B86/000000?text=+) `#009B86`
 
 
   Good luck and if you have questions, please reach out to us at rafael.freaner@dailypay.com
