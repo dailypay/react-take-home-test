@@ -226,15 +226,6 @@ const generateBallotData = () => {
         title: "Best Visual Effects"
       }
     ],
-    navCategories: [
-      "Best Picture",
-      "Best Director",
-      "Best Actress",
-      "Best Actor",
-      "Best Supporting Actress",
-      "Best Supporting Actor",
-      "Best Visual Effects"
-    ]
   }
 }
 
