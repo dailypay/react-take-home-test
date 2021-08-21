@@ -5,7 +5,7 @@ const defaultProps = {};
 
 function renderComponent(props) {
   return render(
-      <App {...props} />
+    <App {...props} />
   );
 }
 

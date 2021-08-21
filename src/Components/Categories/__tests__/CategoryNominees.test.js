@@ -11,7 +11,7 @@ const defaultProps = {
 
 function renderComponent(props = {}) {
   return render(
-      <CategoryNominees {...props} />
+    <CategoryNominees {...props} />
   );
 }
 

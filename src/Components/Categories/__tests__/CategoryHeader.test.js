@@ -7,7 +7,7 @@ const defaultProps = {
 
 function renderComponent(props = {}) {
   return render(
-      <CategoryHeader {...props} />
+    <CategoryHeader {...props} />
   );
 }
 

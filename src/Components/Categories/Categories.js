@@ -1,4 +1,3 @@
-import './styles.css';
 import Col from 'react-bootstrap/Col';
 import partial from 'lodash/partial';
 import React from 'react';
