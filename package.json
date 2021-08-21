@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.21.1",
     "bootstrap": "5.1.0",
     "classnames": "^2.3.1",
     "express": "^4.17.1",
