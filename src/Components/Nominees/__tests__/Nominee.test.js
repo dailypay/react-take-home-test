@@ -1,11 +1,12 @@
 import { render } from '@testing-library/react';
-import App from './App';
+import Nominee from '../Nominee';
+import { nominee as nomineeFixture } from '../fixture';
 
-const defaultProps = {};
+const defaultProps = { nominee: nomineeFixture };
 
-function renderComponent(props) {
+function renderComponent(props = {}) {
   return render(
-      <App {...props} />
+    <Nominee {...props} />
   );
 }
 

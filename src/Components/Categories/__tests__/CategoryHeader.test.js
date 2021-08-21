@@ -1,11 +1,13 @@
 import { render } from '@testing-library/react';
-import App from './App';
+import CategoryHeader from '../CategoryHeader';
 
-const defaultProps = {};
+const defaultProps = {
+  title: 'test category',
+};
 
-function renderComponent(props) {
+function renderComponent(props = {}) {
   return render(
-      <App {...props} />
+      <CategoryHeader {...props} />
   );
 }
 

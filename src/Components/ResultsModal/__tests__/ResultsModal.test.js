@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react';
-import App from './App';
+import ResultsModal from '../ResultsModal';
 
 const defaultProps = {};
 
-function renderComponent(props) {
+function renderComponent(props = {}) {
   return render(
-      <App {...props} />
+    <ResultsModal {...props} />
   );
 }
 

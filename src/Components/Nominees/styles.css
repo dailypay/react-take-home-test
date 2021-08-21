@@ -1,0 +1,30 @@
+.nominee-card {
+  background-color: #009B86;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.nominee-card:hover {
+  background-color: #34AC9C;
+  color: #CCCCCC;
+}
+
+.nominee-card.selected {
+  background-color: #009B86;
+}
+
+.nominee-card .btn {
+  width: 90%;
+}
+
+.nominee-card .card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nominee-card .img-thumbnail {
+  clip-path: circle(42%);
+  height: 20rem;
+  width: 20rem;
+}

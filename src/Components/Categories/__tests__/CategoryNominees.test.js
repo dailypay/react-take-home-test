@@ -1,11 +1,17 @@
+import noop from 'lodash/noop';
 import { render } from '@testing-library/react';
-import App from './App';
+import CategoryNominees from '../CategoryNominees';
+import { categories as categoriesFixture } from '../fixture';
 
-const defaultProps = {};
+const defaultProps = {
+  nominees: categoriesFixture[0].items,
+  onClick: noop,
+  selection: undefined,
+};
 
-function renderComponent(props) {
+function renderComponent(props = {}) {
   return render(
-      <App {...props} />
+      <CategoryNominees {...props} />
   );
 }
 
