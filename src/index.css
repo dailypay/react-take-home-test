@@ -2,6 +2,7 @@
   margin: 0;
 }
 
+
 body {
   margin-left: 10vw;
   margin-right: 10vw;
@@ -26,4 +27,9 @@ button {
   height: 4vh;
   border-radius: 12px;
   font-size: 1.2vw;
+}
+
+button:hover {
+  color: #CCCCCC;
+  cursor: pointer;
 }

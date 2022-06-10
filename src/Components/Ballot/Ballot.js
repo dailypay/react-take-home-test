@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../Styles/Ballot.css'
 import Nominee from '../Nominee/Nominee';
 
-const Ballot = ({ ballot }) => {
+const Ballot = ({ ballot, tallySelections }) => {
   const [selection, setSelection] = useState('')
 
     const renderNominees = (nominees) => {
@@ -24,6 +24,7 @@ const Ballot = ({ ballot }) => {
   const toggleHighlight = (event) => {
     if (event.target.id) {
       setSelection(event.target.id)
+      tallySelections(event.target.id, ballot.id)
     }
   }
 

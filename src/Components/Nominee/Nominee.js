@@ -2,7 +2,7 @@ import React from "react";
 import '../../Styles/Nominee.css'
 
 const Nominee = ({title, photo, id, highlight}) => {
-
+    
     return (
         <div className={`nominee__card ${highlight}`} >
             <h3>{title}</h3>

@@ -27,3 +27,14 @@
     transform: rotate(360deg);
   }
 }
+
+/* @media only screen and (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+    margin-top: 3em;
+  }
+
+  .event-type-select {
+    display: flex;
+  }
+} */

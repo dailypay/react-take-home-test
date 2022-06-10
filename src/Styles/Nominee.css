@@ -9,13 +9,11 @@
     width: 20vw;
     height: 30vh;
     background-color: #009B86;
-    
 }
 
 .nominee__img{
     height: 20vh;
     width: 10vw;
-    /* transform: scale(.2); */
 }
 
 .highlight {
