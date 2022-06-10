@@ -2,3 +2,10 @@
     background-color: gray;
     color: white;
 }
+
+.nominees {
+    margin-bottom: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

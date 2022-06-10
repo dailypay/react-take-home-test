@@ -1,3 +1,23 @@
-.nominee__img{
+.nominee__card {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 15px;
+    width: 20vw;
     height: 30vh;
+    background-color: #009B86;
+    
+}
+
+.nominee__img{
+    height: 20vh;
+    width: 10vw;
+    /* transform: scale(.2); */
+}
+
+.highlight {
+    border: 4px solid yellow;
 }

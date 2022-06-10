@@ -14,20 +14,21 @@ function App() {
 
   const renderBallots = (ballots) => {
     return ballots.map(ballot => {
-      // console.log(ballot)
       return <Ballot 
         key={ballot.id}
         ballot={ballot}
         />
     })
   }
-
-  // console.log(ballots)
   return (
-    <div className="App">
-     
-      {renderBallots(ballots)}
-    </div>
+    <>
+      <header className='App-header'>
+        <h1>Awards 2022</h1>
+      </header>
+      <div className="App">
+        {renderBallots(ballots)}
+      </div>
+    </>
   );
 }
 
