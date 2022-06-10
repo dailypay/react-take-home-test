@@ -1,17 +1,32 @@
+import { useEffect, useState } from 'react';
+import api from './Api/Api';
 import './App.css';
 import Ballot from './Components/Ballot/Ballot';
 
 function App() {
-  // Feel free to remove the contents of the header tag to make more room for your code
+  const [ballots, setBallots] = useState([])
+
+  useEffect(() => {
+    api.getBallotData().then(data => {
+      setBallots(data.items)
+    })
+  }, [])
+
+  const renderBallots = (ballots) => {
+    return ballots.map(ballot => {
+      // console.log(ballot)
+      return <Ballot 
+        key={ballot.id}
+        ballot={ballot}
+        />
+    })
+  }
+
+  // console.log(ballots)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={'https://www.dailypay.com/wp-content/uploads/DailyPay-Logo-White.svg'} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-      <Ballot />
+     
+      {renderBallots(ballots)}
     </div>
   );
 }
