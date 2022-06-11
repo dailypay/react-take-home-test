@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react';
 import api from './Api/Api';
 import './App.css';
 import Ballot from './Components/Ballot/Ballot'
+import Result from './Components/Result/Result';
 
 function App() {
   const [ballots, setBallots] = useState([])
   const [allBallots, setAllBallots] = useState({})
+  const [modal, setModal] = useState(false)
 
   useEffect(() => {
     api.getBallotData().then(data => {
@@ -22,7 +24,6 @@ function App() {
       }
     })
     setAllBallots(ballotObj)
-
   }
 
   const tallySelections = (selection, ballot) => {
@@ -42,8 +43,8 @@ function App() {
   }
 
 
-  const submitAllBallots = () => {
-    console.log(allBallots)
+  const toggleModal = () => {
+    modal ? setModal(false) : setModal(true)
   }
 
   return (
@@ -54,7 +55,8 @@ function App() {
       <div className="App">
         {renderBallots(ballots)}
       </div>
-      <button onClick={() => submitAllBallots()}>Submit All Ballots</button>
+      <button onClick={() => toggleModal()}>Submit All Ballots</button>
+      {modal && <Result toggleModal={toggleModal} allBallots={allBallots}/>}
     </>
   )
 }
