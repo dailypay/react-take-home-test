@@ -42,7 +42,6 @@ function App() {
     })
   }
 
-
   const toggleModal = () => {
     modal ? setModal(false) : setModal(true)
   }

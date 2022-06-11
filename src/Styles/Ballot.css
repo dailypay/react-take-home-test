@@ -3,6 +3,13 @@
     color: white;
 }
 
+.ballot__header {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nominees {
     margin-bottom: 5vh;
     display: flex;
