@@ -6,40 +6,26 @@ import Result from './Components/Result/Result';
 
 function App() {
   const [ballots, setBallots] = useState([])
-  const [allBallots, setAllBallots] = useState({})
+  const [userBallot, setUserBallot] = useState({})
   const [modal, setModal] = useState(false)
 
   useEffect(() => {
     api.getBallotData().then(data => {
       setBallots(data.items)
-      formatAllBallots(data.items)
+      initializeUserBallot(data.items)
     })
   }, [])
 
-  const formatAllBallots = (ballots) => {
-    let ballotObj = {}
-    ballots.forEach(ballot => {
-      if (!ballotObj[ballot.id]) {
-        ballotObj[ballot.id] = ''
-      }
-    })
-    setAllBallots(ballotObj)
+  const initializeUserBallot = (ballots) => {
+    let emptyBallot = {}
+    ballots.forEach(category => emptyBallot[category.id] = '')
+    setUserBallot(emptyBallot)
   }
 
   const tallySelections = (selection, ballot) => {
-    let newAllBallots = {...allBallots}
+    let newAllBallots = {...userBallot}
     newAllBallots[ballot] = selection
-    setAllBallots(newAllBallots)
-  }
-
-  const renderBallots = (ballots) => {
-    return ballots.map(ballot => {
-      return <Ballot 
-        key={ballot.id}
-        ballot={ballot}
-        tallySelections={tallySelections}
-        />
-    })
+    setUserBallot(newAllBallots)
   }
 
   const toggleModal = () => {
@@ -52,10 +38,10 @@ function App() {
         <h1>Awards 2022</h1>
       </header>
       <div className="App">
-        {renderBallots(ballots)}
+        <Ballot ballots={ballots} tallySelections={tallySelections}/>
       </div>
       <button onClick={() => toggleModal()}>Submit All Ballots</button>
-      {modal && <Result toggleModal={toggleModal} allBallots={allBallots}/>}
+      {modal && <Result toggleModal={toggleModal} userBallot={userBallot}/>}
     </>
   )
 }

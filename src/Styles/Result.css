@@ -15,17 +15,17 @@
 .modal__result {
     margin-top: -20vh;
     display: flex;
-    font-size: 22px;
+    font-size: 2rem;
     justify-content: space-between;
     background-color: white;
     width: 60vw;
-    height: 40vh;
+    height: 50vh;
     color: black;
 }
 
 .modal__result-ballots {
     margin-bottom: 1vh;
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
 .modal__result-ballots-box {

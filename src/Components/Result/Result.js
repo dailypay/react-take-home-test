@@ -1,14 +1,14 @@
 import React from "react";
 import '../../Styles/Result.css'
 
-const Result = ({ toggleModal, allBallots }) => {
+const Result = ({ toggleModal, userBallot }) => {
     
-    const renderResults = Object.keys(allBallots).map(e => {
+    const renderResults = Object.keys(userBallot).map(category => {
         return (
-            <div key={e} className='modal__result-ballots'>
-                <h4>For {e.split('-').join(' ')}:</h4>
-                {allBallots[e] ? 
-                <p>{allBallots[e].split('-').join(' ').toUpperCase()}</p> : <p>None</p>}
+            <div key={category} className='modal__result-ballots'>
+                <h4>For {category.split('-').join(' ')}:</h4>
+                {userBallot[category] ? 
+                    <p>{userBallot[category].split('-').join(' ').toUpperCase()}</p> : <p>None</p>}
             </div>
         )
     })

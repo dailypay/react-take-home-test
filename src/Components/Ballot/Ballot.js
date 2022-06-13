@@ -1,43 +1,26 @@
-import React, { useState } from 'react';
-import '../../Styles/Ballot.css'
-import Nominee from '../Nominee/Nominee';
+import React from "react";
+import BallotCategory from "../BallotCategory/BallotCategory";
 
-const Ballot = ({ ballot, tallySelections }) => {
-  const [selection, setSelection] = useState('')
+const Ballot = ({ ballots, tallySelections }) => {
 
-    const renderNominees = (nominees) => {
-      return nominees.map(nom => {
-        let highlight = '';
-        if (nom.id === selection) {
-          highlight = 'highlight'
-        }
-        return <Nominee
-            key={nom.id}
-            id={nom.id} 
-            title={nom.title}
-            photo={nom.photoUrL}
-            highlight={highlight}
-            />
-      })
-    }
-
-  const toggleHighlight = (event) => {
-    if (event.target.id) {
-      setSelection(event.target.id)
-      tallySelections(event.target.id, ballot.id)
-    }
+  const renderBallots = (ballots) => {
+    return ballots.map(ballot => {
+      return <BallotCategory 
+        key={ballot.id}
+        ballot={ballot}
+        tallySelections={tallySelections}
+        />
+    })
   }
 
   return (
     <>
-    <div className='ballot' >
-      <h2 className='ballot__header'>{ballot.title}</h2>
-    </div>
-    <div className='nominees' onClick={event => toggleHighlight(event)}>
-      {renderNominees(ballot.items)}
-    </div>
+      {renderBallots(ballots)}
     </>
   )
+
 }
 
-export default Ballot;
+
+
+export default Ballot

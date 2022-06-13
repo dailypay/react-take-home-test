@@ -1,7 +1,7 @@
 * {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
-
 
 body {
   margin-left: 10vw;
@@ -26,7 +26,7 @@ button {
   width: 10vw;
   height: 4vh;
   border-radius: 12px;
-  font-size: 1.2vw;
+  font-size: 1.4vw;
 }
 
 button:hover {

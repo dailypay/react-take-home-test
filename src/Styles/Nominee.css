@@ -11,6 +11,10 @@
     background-color: #009B86;
 }
 
+.nominee__card:hover {
+    background-color: #34AC9C;
+}
+
 .nominee__img{
     height: 20vh;
     width: 10vw;

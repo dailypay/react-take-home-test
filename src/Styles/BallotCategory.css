@@ -1,0 +1,18 @@
+.ballot {
+    background-color: gray;
+    color: white;
+}
+
+.ballot__header {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nominees {
+    margin-bottom: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

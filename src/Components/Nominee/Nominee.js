@@ -10,8 +10,8 @@ const Nominee = ({title, photo, id, highlight}) => {
                 <img className="nominee__img" src={photo} alt={`poster for film titled ${title}`}/>
             </div>
             {highlight ? 
-            <button id={id}>Selected!</button> :
-            <button id={id}>Nominate!</button>}
+                <button id={id}>Selected!</button> :
+                <button id={id}>Nominate!</button>}
         </div>
     )
 }
